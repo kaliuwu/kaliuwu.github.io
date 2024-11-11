@@ -7,6 +7,7 @@
 
 <script>
     var r = document.querySelector(':root');
+
     function coords(e)
     {
         var w = window.innerWidth;
@@ -14,11 +15,13 @@
         var mx = e.x;
         var posPercent = (mx/w);
         var angle = ((90*posPercent+135));
-
+        var currentTime = new Date().toTimeString().split(' ')[0];
+        document.getElementById("theTime").innerHTML = currentTime;
         console.log(`mouse location = X: ${e.x}, Y: ${e.y}`);
         console.log(`SIZE: ${w}x${h}`);
         console.log(posPercent);
         console.log(angle);
+        console.log(currentTime);
         r.style.setProperty('--angle', `${angle}deg`);
         
     }
@@ -28,7 +31,9 @@
 <body onmousemove="coords(event)">
 
     
-    <div id="grad1"></div>
+    <div id="grad1">
+        <center><h1 id="theTime">mewo</h1></center>
+    </div>
     
     </body>
 
