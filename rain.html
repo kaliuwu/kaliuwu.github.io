@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="rain.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+
+<script>
+    var r = document.querySelector(':root');
+    function coords(e)
+    {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        var mx = e.x;
+        var posPercent = (mx/w);
+        var angle = ((90*posPercent+135));
+
+        console.log(`mouse location = X: ${e.x}, Y: ${e.y}`);
+        console.log(`SIZE: ${w}x${h}`);
+        console.log(posPercent);
+        console.log(angle);
+        r.style.setProperty('--angle', `${angle}deg`);
+        
+    }
+</script>
+
+<! 90-135-180-225-270 deg>
+<body onmousemove="coords(event)">
+
+    
+    <div id="grad1"></div>
+    
+    </body>
+
+
+
+</html>

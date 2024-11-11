@@ -1,0 +1,21 @@
+:root {
+    --angle: 180deg;
+}
+
+h1, h2, p, a {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+}
+body, html { 
+    overflow: hidden;
+}
+body {
+    background-color: black;
+    border: none;
+}
+#grad1 {
+    height: 1000px;
+    width: auto;
+    margin-top: 0px;
+    background-color: black; /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--angle),black, #17aaff);
+}
